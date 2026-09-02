@@ -1,97 +1,257 @@
-import Link from 'next/link';
+import Link from "next/link";
+
+const ArrowUpRight = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="ml-1">
+    <path d="M7 17l9.2-9.2M17 17V7H7"/>
+  </svg>
+);
 
 export default function Home() {
   return (
-    <div className="flex flex-col w-full">
-      {/* Hero Section */}
-      <section className="relative w-full py-24 md:py-32 lg:py-40 bg-zinc-900 text-white overflow-hidden">
-        {/* Background Grid Pattern */}
-        <div className="absolute inset-0 bg-[url('https://transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
-        <div className="container px-4 md:px-8 mx-auto relative z-10 flex flex-col items-center text-center">
-          <div className="inline-flex items-center rounded-full border border-zinc-700 bg-zinc-800/50 px-3 py-1 text-sm font-medium mb-8">
-            <span className="flex h-2 w-2 rounded-full bg-brand-yellow mr-2"></span>
-            Engineering Excellence Since 2003
-          </div>
-          <h1 className="font-chivo text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 max-w-4xl">
-            Specialists in <span className="text-brand-yellow">Oil & Gas</span> Engineering Consultancy
+    <>
+      {/* HERO SECTION */}
+      <section className="bg-brand-black text-white relative flex flex-col min-h-[90vh]">
+        <div className="absolute inset-0 bg-gradient-to-b from-brand-black/90 to-brand-black/95 z-0"></div>
+        
+        <div className="relative z-10 flex-grow flex flex-col justify-center px-6 md:px-12 py-24 max-w-7xl mx-auto w-full">
+          <span className="font-plex-mono text-xs text-gray-400 uppercase tracking-[0.2em] mb-8 block">
+            EST. 2003 / VADODARA, INDIA
+          </span>
+          
+          <h1 className="text-6xl md:text-8xl font-chivo font-black leading-[0.95] tracking-tight mb-8">
+            Designing the<br/>
+            <span className="text-brand-yellow">storage backbone</span><br/>
+            of oil & gas.
           </h1>
-          <p className="text-zinc-400 text-lg md:text-xl max-w-2xl mb-10">
-            Providing comprehensive design and engineering solutions across mechanical, civil, piping, and structural domains.
+          
+          <p className="text-gray-300 max-w-2xl text-lg md:text-xl font-light mb-12">
+            Gabatia Engineers & Consultants is a 22-year specialist consultancy in mechanical, civil, piping and structural design — trusted by terminals, refineries, petrochemicals and depots across India and the world.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Link href="/contact" className="inline-flex items-center justify-center rounded-md text-sm font-medium bg-brand-yellow text-zinc-900 h-12 px-8 py-3 hover:bg-brand-yellow-hover transition-colors">
-              Discuss Your Project
+          
+          <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+            <Link href="/projects" className="bg-brand-yellow text-brand-black px-8 py-4 font-medium hover:bg-yellow-400 transition-colors inline-flex items-center gap-2">
+              View Projects <ArrowUpRight />
             </Link>
-            <Link href="/about" className="inline-flex items-center justify-center rounded-md text-sm font-medium border border-zinc-700 bg-zinc-800 text-white h-12 px-8 py-3 hover:bg-zinc-700 transition-colors">
-              Our Services
+            <Link href="/contact" className="border border-white/20 text-white px-8 py-4 font-medium hover:bg-white/10 transition-colors inline-flex items-center gap-2">
+              Request a Quote <ArrowUpRight />
             </Link>
+            
+            <div className="mt-8 sm:mt-0 sm:ml-auto text-right">
+              <span className="font-plex-mono text-[0.6rem] text-gray-500 uppercase tracking-widest block mb-1">
+                [ SPECIALISM ]
+              </span>
+              <span className="font-medium text-white">
+                Oil storage tank<br/>
+                design — API 650 / 620
+              </span>
+            </div>
+          </div>
+        </div>
+        
+        <div className="relative z-10 border-t border-white/10 flex flex-wrap gap-8 px-6 md:px-12 py-6 font-plex-mono text-xs text-gray-500 uppercase tracking-widest bg-brand-black/50 backdrop-blur-md">
+          <span className="text-white">SECTORS SERVED</span>
+          <span>/ OIL TERMINALS</span>
+          <span>/ REFINERIES</span>
+          <span>/ PETROCHEMICALS</span>
+          <span>/ OIL DEPOTS</span>
+        </div>
+      </section>
+
+      {/* STATS STRIP */}
+      <section className="bg-white border-b border-gray-100 py-16 px-6 md:px-12">
+        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-12 text-center md:text-left divide-x divide-gray-100">
+          <div className="px-4">
+            <div className="text-6xl md:text-7xl font-chivo font-black mb-2 tracking-tighter text-brand-black">22+</div>
+            <div className="font-plex-mono text-[0.6rem] text-gray-500 uppercase tracking-widest">YEARS IN INDUSTRY</div>
+          </div>
+          <div className="px-4">
+            <div className="text-6xl md:text-7xl font-chivo font-black mb-2 tracking-tighter text-brand-black">180+</div>
+            <div className="font-plex-mono text-[0.6rem] text-gray-500 uppercase tracking-widest">PROJECTS DELIVERED</div>
+          </div>
+          <div className="px-4">
+            <div className="text-6xl md:text-7xl font-chivo font-black mb-2 tracking-tighter text-brand-black">60+</div>
+            <div className="font-plex-mono text-[0.6rem] text-gray-500 uppercase tracking-widest">CLIENTS SERVED</div>
+          </div>
+          <div className="px-4">
+            <div className="text-6xl md:text-7xl font-chivo font-black mb-2 tracking-tighter text-brand-black">12</div>
+            <div className="font-plex-mono text-[0.6rem] text-gray-500 uppercase tracking-widest">COUNTRIES REACHED</div>
           </div>
         </div>
       </section>
 
-      {/* Services Overview */}
-      <section className="py-20 md:py-28 bg-white">
-        <div className="container mx-auto px-4 md:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16">
-            <div className="max-w-2xl">
-              <h2 className="font-chivo text-3xl md:text-4xl font-bold tracking-tight mb-4">Core Competencies</h2>
-              <p className="text-zinc-500 text-lg">Delivering precision engineering and robust designs for the energy sector.</p>
+      {/* OVERVIEW SECTION */}
+      <section className="bg-white py-32 px-6 md:px-12">
+        <div className="max-w-7xl mx-auto">
+          <span className="overline-text">[ 01 / OVERVIEW ]</span>
+          
+          <div className="flex flex-col md:flex-row gap-16 lg:gap-32 items-start mt-8">
+            <div className="md:w-1/2">
+              <h2 className="text-5xl md:text-6xl font-chivo font-black leading-[0.95] tracking-tight">
+                Two decades of engineering for <span className="highlight-yellow">hydrocarbons.</span>
+              </h2>
             </div>
-            <Link href="/about" className="hidden md:inline-flex text-brand-yellow hover:text-brand-yellow-hover font-medium items-center gap-1 mt-4 md:mt-0">
-              View all services <span aria-hidden="true">→</span>
+            
+            <div className="md:w-1/2 text-lg text-gray-600 space-y-6 pt-2">
+              <p>
+                Founded in 2003, Gabatia Engineers & Consultants delivers integrated design services for the oil & gas industry. Our engineers work across mechanical, civil, piping and structural disciplines under one roof — eliminating co-ordination gaps that typically plague storage and process facility projects.
+              </p>
+              <p>
+                From feasibility studies to construction-ready drawings, we produce documentation that is buildable, code-compliant and audit-ready. Our practice spans Indian operators (IOCL, BPCL, HPCL, Reliance) and international clients in the Gulf and South-East Asia.
+              </p>
+              <div className="pt-4">
+                <Link href="/about" className="font-bold border-b-2 border-brand-black pb-1 hover:text-brand-yellow hover:border-brand-yellow transition-colors inline-flex items-center gap-2">
+                  Read our story <ArrowUpRight />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SERVICES SECTION */}
+      <section className="bg-brand-gray py-32 px-6 md:px-12 border-y border-gray-200">
+        <div className="max-w-7xl mx-auto">
+          <span className="overline-text">[ 02 / SERVICES ]</span>
+          
+          <div className="flex justify-between items-end mb-16">
+            <h2 className="text-5xl md:text-6xl font-chivo font-black leading-[0.95] tracking-tight max-w-lg">
+              Four disciplines.<br/>
+              One delivery team.
+            </h2>
+            <Link href="/services" className="hidden md:inline-flex font-bold border-b-2 border-brand-black pb-1 hover:text-brand-yellow hover:border-brand-yellow transition-colors items-center gap-2">
+              Explore all services <ArrowUpRight />
+            </Link>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 bg-white border border-gray-200 divide-y md:divide-y-0 md:divide-x divide-gray-200">
+            {/* Service 1 */}
+            <div className="p-10 hover:bg-gray-50 transition-colors group">
+              <div className="flex justify-between items-start mb-16">
+                <span className="font-plex-mono text-[0.6rem] text-gray-400 uppercase">/ 01</span>
+                <span className="text-gray-300 group-hover:text-brand-yellow transition-colors"><ArrowUpRight /></span>
+              </div>
+              <h3 className="text-2xl font-chivo font-black mb-4 tracking-tight">Mechanical</h3>
+              <p className="text-gray-500 text-sm leading-relaxed">Storage tank design, pressure vessels, heat exchangers and rotating equipment.</p>
+            </div>
+            {/* Service 2 */}
+            <div className="p-10 hover:bg-gray-50 transition-colors group">
+              <div className="flex justify-between items-start mb-16">
+                <span className="font-plex-mono text-[0.6rem] text-gray-400 uppercase">/ 02</span>
+                <span className="text-gray-300 group-hover:text-brand-yellow transition-colors"><ArrowUpRight /></span>
+              </div>
+              <h3 className="text-2xl font-chivo font-black mb-4 tracking-tight">Civil</h3>
+              <p className="text-gray-500 text-sm leading-relaxed">Foundations, paving, dyke walls and full plot development for terminals.</p>
+            </div>
+            {/* Service 3 */}
+            <div className="p-10 hover:bg-gray-50 transition-colors group">
+              <div className="flex justify-between items-start mb-16">
+                <span className="font-plex-mono text-[0.6rem] text-gray-400 uppercase">/ 03</span>
+                <span className="text-gray-300 group-hover:text-brand-yellow transition-colors"><ArrowUpRight /></span>
+              </div>
+              <h3 className="text-2xl font-chivo font-black mb-4 tracking-tight">Piping</h3>
+              <p className="text-gray-500 text-sm leading-relaxed">Process piping layout, stress analysis and fabrication isometrics.</p>
+            </div>
+            {/* Service 4 */}
+            <div className="p-10 hover:bg-gray-50 transition-colors group">
+              <div className="flex justify-between items-start mb-16">
+                <span className="font-plex-mono text-[0.6rem] text-gray-400 uppercase">/ 04</span>
+                <span className="text-gray-300 group-hover:text-brand-yellow transition-colors"><ArrowUpRight /></span>
+              </div>
+              <h3 className="text-2xl font-chivo font-black mb-4 tracking-tight">Structural</h3>
+              <p className="text-gray-500 text-sm leading-relaxed">Pipe racks, technological structures and offshore steel design.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SELECTED WORK */}
+      <section className="bg-white py-32 px-6 md:px-12">
+        <div className="max-w-7xl mx-auto">
+          <span className="overline-text">[ 03 / SELECTED WORK ]</span>
+          
+          <div className="flex justify-between items-end mb-16">
+            <h2 className="text-5xl md:text-6xl font-chivo font-black leading-[0.95] tracking-tight">
+              Built where it matters most.
+            </h2>
+            <Link href="/projects" className="hidden md:inline-flex font-bold border-b-2 border-brand-black pb-1 hover:text-brand-yellow hover:border-brand-yellow transition-colors items-center gap-2">
+              All projects <ArrowUpRight />
             </Link>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Service Card 1 */}
-            <div className="group border border-zinc-200 rounded-xl p-8 hover:border-brand-yellow transition-colors hover:shadow-sm">
-              <div className="h-12 w-12 rounded-lg bg-zinc-100 flex items-center justify-center mb-6 group-hover:bg-brand-yellow/10 transition-colors">
-                <svg className="w-6 h-6 text-zinc-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                </svg>
+            {/* Project 1 */}
+            <div className="group cursor-pointer">
+              <div className="bg-gray-100 aspect-[4/3] mb-6 relative overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&q=80&w=800&h=600" alt="Crude Storage Terminal" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
-              <h3 className="font-semibold text-xl mb-3">Mechanical Engineering</h3>
-              <p className="text-zinc-500 text-sm leading-relaxed mb-6">Expertise in oil storage tank design and mechanical equipment specifications.</p>
-              <Link href="/about" className="text-sm font-medium underline underline-offset-4 decoration-zinc-300 hover:decoration-brand-yellow">Learn more</Link>
+              <div className="flex justify-between text-[0.6rem] font-plex-mono text-gray-400 uppercase tracking-widest mb-3">
+                <span>/ OIL TERMINAL</span>
+                <span>2023</span>
+              </div>
+              <h3 className="text-xl font-chivo font-bold mb-2">100,000 KL Crude Storage Terminal</h3>
+              <p className="text-gray-500 text-sm">Mundra, Gujarat</p>
             </div>
-
-            {/* Service Card 2 */}
-            <div className="group border border-zinc-200 rounded-xl p-8 hover:border-brand-yellow transition-colors hover:shadow-sm">
-              <div className="h-12 w-12 rounded-lg bg-zinc-100 flex items-center justify-center mb-6 group-hover:bg-brand-yellow/10 transition-colors">
-                <svg className="w-6 h-6 text-zinc-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
+            
+            {/* Project 2 */}
+            <div className="group cursor-pointer">
+              <div className="bg-gray-100 aspect-[4/3] mb-6 relative overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1580982335151-5120a1122a61?auto=format&fit=crop&q=80&w=800&h=600" alt="Refinery Piping" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
-              <h3 className="font-semibold text-xl mb-3">Civil & Structural</h3>
-              <p className="text-zinc-500 text-sm leading-relaxed mb-6">Comprehensive structural analysis and civil engineering solutions for heavy industry.</p>
-              <Link href="/about" className="text-sm font-medium underline underline-offset-4 decoration-zinc-300 hover:decoration-brand-yellow">Learn more</Link>
+              <div className="flex justify-between text-[0.6rem] font-plex-mono text-gray-400 uppercase tracking-widest mb-3">
+                <span>/ REFINERY</span>
+                <span>2022</span>
+              </div>
+              <h3 className="text-xl font-chivo font-bold mb-2">Refinery Hydrocracker Unit Piping</h3>
+              <p className="text-gray-500 text-sm">Jamnagar, Gujarat</p>
             </div>
-
-            {/* Service Card 3 */}
-            <div className="group border border-zinc-200 rounded-xl p-8 hover:border-brand-yellow transition-colors hover:shadow-sm">
-              <div className="h-12 w-12 rounded-lg bg-zinc-100 flex items-center justify-center mb-6 group-hover:bg-brand-yellow/10 transition-colors">
-                <svg className="w-6 h-6 text-zinc-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
-                </svg>
+            
+            {/* Project 3 */}
+            <div className="group cursor-pointer">
+              <div className="bg-gray-100 aspect-[4/3] mb-6 relative overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1542361345-89ce1f116035?auto=format&fit=crop&q=80&w=800&h=600" alt="Olefins Storage" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
-              <h3 className="font-semibold text-xl mb-3">Piping Design</h3>
-              <p className="text-zinc-500 text-sm leading-relaxed mb-6">Advanced piping systems design, stress analysis, and isometric generation.</p>
-              <Link href="/about" className="text-sm font-medium underline underline-offset-4 decoration-zinc-300 hover:decoration-brand-yellow">Learn more</Link>
+              <div className="flex justify-between text-[0.6rem] font-plex-mono text-gray-400 uppercase tracking-widest mb-3">
+                <span>/ PETROCHEMICALS</span>
+                <span>2021</span>
+              </div>
+              <h3 className="text-xl font-chivo font-bold mb-2">Petrochemical Olefins Storage</h3>
+              <p className="text-gray-500 text-sm">Dahej, Gujarat</p>
+            </div>
+          </div>
+          
+          {/* TRUSTED BY INDUSTRY LEADERS */}
+          <div className="mt-32 border-t border-gray-100 pt-16">
+            <span className="overline-text mb-12 block text-center">[ TRUSTED BY INDUSTRY LEADERS ]</span>
+            <div className="flex flex-wrap justify-between items-center opacity-40 grayscale gap-8 px-8">
+              <div className="font-bold text-gray-500 text-xl">Indian Oil</div>
+              <div className="font-bold text-gray-500 text-xl">BPCL</div>
+              <div className="font-bold text-gray-500 text-xl">HPCL</div>
+              <div className="font-bold text-gray-500 text-xl">Reliance</div>
+              <div className="font-bold text-gray-500 text-xl">ADNOC</div>
+              <div className="font-bold text-gray-500 text-xl">Aramco</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-zinc-50 border-t border-zinc-200">
-        <div className="container mx-auto px-4 md:px-8 text-center max-w-3xl">
-          <h2 className="font-chivo text-3xl md:text-4xl font-bold tracking-tight mb-6">Have an engineering or consultancy requirement?</h2>
-          <p className="text-zinc-500 text-lg mb-10">Our experienced team is ready to deliver precise, compliant, and efficient engineering solutions for your next project.</p>
-          <Link href="/contact" className="inline-flex items-center justify-center rounded-md text-sm font-medium bg-zinc-900 text-white h-12 px-8 py-3 hover:bg-zinc-800 transition-colors">
-            Contact Us Today
-          </Link>
+      {/* CTA SECTION */}
+      <section className="bg-zinc-900 py-32 px-6 md:px-12 border-t border-gray-800 text-white relative">
+        <div className="max-w-7xl mx-auto relative z-10 flex flex-col md:flex-row items-center justify-between gap-12">
+          <div className="md:w-2/3">
+            <h2 className="text-5xl md:text-7xl font-chivo font-black leading-[0.95] tracking-tight mb-6">
+              Have a tank, terminal<br/>or refinery scope?
+            </h2>
+            <p className="text-gray-300 text-lg max-w-xl">
+              Share your concept, capacity and site. We'll respond with a feasibility note and indicative engineering hours within 24 hours.
+            </p>
+          </div>
+          <div>
+            <Link href="/contact" className="bg-brand-yellow text-brand-black px-8 py-4 font-bold text-lg hover:bg-yellow-400 transition-colors inline-flex items-center gap-2">
+              Start the conversation <ArrowUpRight />
+            </Link>
+          </div>
         </div>
       </section>
-    </div>
+    </>
   );
 }

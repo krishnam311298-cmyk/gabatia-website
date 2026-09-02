@@ -1,96 +1,225 @@
-import Link from 'next/link';
-import { Metadata } from 'next';
+import Link from "next/link";
+import Image from "next/image";
 
-export const metadata: Metadata = {
-  title: 'About & Services — Gabatia Engineers',
-  description: 'Learn about our engineering expertise and comprehensive service offerings.',
-};
+const ArrowUpRight = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="ml-1">
+    <path d="M7 17l9.2-9.2M17 17V7H7"/>
+  </svg>
+);
 
-export default function AboutServices() {
+const PrecisionIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-brand-yellow mb-4">
+    <circle cx="12" cy="12" r="10"></circle><line x1="22" y1="12" x2="18" y2="12"></line><line x1="6" y1="12" x2="2" y2="12"></line><line x1="12" y1="6" x2="12" y2="2"></line><line x1="12" y1="22" x2="12" y2="18"></line>
+  </svg>
+);
+
+const TransparencyIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-brand-yellow mb-4">
+    <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+  </svg>
+);
+
+const AccountabilityIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-brand-yellow mb-4">
+    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+  </svg>
+);
+
+
+export default function About() {
   return (
-    <div className="flex flex-col w-full">
-      {/* Header Section */}
-      <section className="py-20 md:py-28 bg-zinc-900 text-white relative">
-        <div className="container mx-auto px-4 md:px-8 text-center max-w-4xl relative z-10">
-          <h1 className="font-chivo text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
-            About <span className="text-brand-yellow">Gabatia</span>
-          </h1>
-          <p className="text-zinc-400 text-lg md:text-xl">
-            A legacy of precision and reliability in the oil, gas, and energy sectors.
-          </p>
-        </div>
-      </section>
-
-      {/* About Section */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="container mx-auto px-4 md:px-8 max-w-4xl">
-          <h2 className="font-chivo text-3xl md:text-4xl font-bold mb-6">Company Introduction</h2>
-          <div className="prose prose-zinc max-w-none text-lg text-zinc-600 space-y-6">
-            <p>
-              Founded in 2003, GABATIA ENGINEER AND CONSULTANTS LLP has established itself as a premier engineering consultancy firm specializing in the energy sector. We bring decades of hands-on experience and deep technical expertise to every project we undertake.
-            </p>
-            <p>
-              Our multidisciplinary team of engineers is dedicated to delivering robust, compliant, and cost-effective solutions for complex industrial challenges, with a particular focus on oil storage tank design and associated infrastructure.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="py-16 md:py-24 bg-zinc-50 border-t border-zinc-200">
-        <div className="container mx-auto px-4 md:px-8 max-w-6xl">
-          <h2 className="font-chivo text-3xl md:text-4xl font-bold mb-12 text-center">Our Expertise</h2>
+    <>
+      {/* HEADER SECTION */}
+      <section className="bg-white py-32 px-6 md:px-12">
+        <div className="max-w-7xl mx-auto">
+          <span className="overline-text">[ ABOUT / 01 ]</span>
           
-          <div className="space-y-8">
-            {/* Service 1 */}
-            <div className="bg-white p-8 md:p-10 rounded-2xl border border-zinc-200 shadow-sm flex flex-col md:flex-row gap-8 items-start">
-              <div className="h-16 w-16 rounded-xl bg-zinc-100 flex items-center justify-center shrink-0">
-                <span className="font-chivo font-bold text-2xl text-zinc-900">01</span>
-              </div>
-              <div>
-                <h3 className="font-chivo text-2xl font-bold mb-4">Mechanical Engineering</h3>
-                <p className="text-zinc-600 text-lg leading-relaxed">
-                  We specialize in the design and engineering of API 650, API 620, and AWWA D100 storage tanks. Our mechanical services include finite element analysis, equipment specification, pressure vessel design, and comprehensive mechanical fitness-for-service assessments.
-                </p>
-              </div>
+          <h1 className="text-6xl md:text-8xl font-chivo font-black leading-[0.95] tracking-tight mt-8 mb-24 max-w-5xl">
+            We design the <br/>
+            <span className="highlight-yellow mt-2">structures</span> that hold <br/>
+            the hydrocarbon <br/>
+            economy.
+          </h1>
+          
+          <div className="flex flex-col md:flex-row gap-16 lg:gap-32 border-t border-gray-200 pt-16">
+            <div className="md:w-1/3">
+              <span className="font-plex-mono text-[0.6rem] text-gray-500 uppercase tracking-widest block mb-4">
+                [ MISSION ]
+              </span>
+              <h2 className="text-4xl font-chivo font-black leading-tight">
+                Engineering<br/>without compromise.
+              </h2>
             </div>
-
-            {/* Service 2 */}
-            <div className="bg-white p-8 md:p-10 rounded-2xl border border-zinc-200 shadow-sm flex flex-col md:flex-row gap-8 items-start">
-              <div className="h-16 w-16 rounded-xl bg-zinc-100 flex items-center justify-center shrink-0">
-                <span className="font-chivo font-bold text-2xl text-zinc-900">02</span>
-              </div>
-              <div>
-                <h3 className="font-chivo text-2xl font-bold mb-4">Civil & Structural Engineering</h3>
-                <p className="text-zinc-600 text-lg leading-relaxed">
-                  Our civil engineering division provides comprehensive structural analysis, foundation design for heavy industrial equipment, concrete and steel structure design, and site development engineering for oil terminals and industrial plants.
-                </p>
-              </div>
+            
+            <div className="md:w-2/3 text-lg text-gray-600 space-y-6">
+              <p>
+                Since 2003, Gabatia has served as a single-point engineering partner for owners and EPC contractors in the oil & gas industry. Our specialism is the design of storage tanks — atmospheric, low-pressure, cryogenic and mounded — but our integrated team also delivers the civil, piping and structural packages that surround them.
+              </p>
+              <p>
+                We don't outsource disciplines. Mechanical, civil, piping and structural engineers sit one room apart. That proximity is why our drawings work the first time on site.
+              </p>
             </div>
+          </div>
+        </div>
+      </section>
 
-            {/* Service 3 */}
-            <div className="bg-white p-8 md:p-10 rounded-2xl border border-zinc-200 shadow-sm flex flex-col md:flex-row gap-8 items-start">
-              <div className="h-16 w-16 rounded-xl bg-zinc-100 flex items-center justify-center shrink-0">
-                <span className="font-chivo font-bold text-2xl text-zinc-900">03</span>
+      {/* VALUES SPLIT SECTION */}
+      <section className="bg-brand-black text-white">
+        <div className="flex flex-col lg:flex-row">
+          {/* Image Side */}
+          <div className="lg:w-1/2 min-h-[400px] lg:min-h-[600px] relative">
+             <img src="https://placehold.co/800x800/222/555?text=Engineering+Values" alt="Values" className="w-full h-full object-cover" />
+          </div>
+          
+          {/* Content Side */}
+          <div className="lg:w-1/2 p-12 lg:p-24 flex flex-col justify-center">
+            <span className="font-plex-mono text-[0.6rem] text-gray-500 uppercase tracking-widest block mb-6">
+              [ VALUES / 02 ]
+            </span>
+            <h2 className="text-5xl md:text-6xl font-chivo font-black leading-tight mb-16">
+              What we<br/>stand for.
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4">
+              <div>
+                <PrecisionIcon />
+                <h3 className="font-bold mb-3">Precision</h3>
+                <p className="text-sm text-gray-400">Buildable, code-compliant drawings — checked twice, signed once.</p>
               </div>
               <div>
-                <h3 className="font-chivo text-2xl font-bold mb-4">Piping & Layout Design</h3>
-                <p className="text-zinc-600 text-lg leading-relaxed">
-                  We offer end-to-end piping design solutions including 3D plant layout, pipe stress analysis, isometric generation, and material take-offs (MTO). Our designs comply with ASME B31.3 and B31.4 codes ensuring safety and efficiency.
-                </p>
+                <TransparencyIcon />
+                <h3 className="font-bold mb-3">Transparency</h3>
+                <p className="text-sm text-gray-400">Clear engineering memos, weekly progress, and traceable revisions.</p>
+              </div>
+              <div>
+                <AccountabilityIcon />
+                <h3 className="font-bold mb-3">Accountability</h3>
+                <p className="text-sm text-gray-400">We sign our drawings — and stand behind every line of them.</p>
               </div>
             </div>
           </div>
         </div>
       </section>
-      
-      {/* CTA */}
-      <section className="py-20 bg-brand-yellow text-zinc-900 text-center">
-        <h2 className="font-chivo text-3xl font-bold mb-6">Ready to start your next project?</h2>
-        <Link href="/contact" className="inline-flex items-center justify-center rounded-md font-medium bg-zinc-900 text-white h-12 px-8 py-3 hover:bg-zinc-800 transition-colors">
-          Get in Touch
-        </Link>
+
+      {/* TIMELINE */}
+      <section className="bg-white py-32 px-6 md:px-12">
+        <div className="max-w-5xl mx-auto">
+          <span className="overline-text">[ TIMELINE / 03 ]</span>
+          <h2 className="text-5xl md:text-6xl font-chivo font-black leading-tight mb-24">
+            Two decades, one trajectory.
+          </h2>
+          
+          <div className="border border-gray-200 bg-white">
+            {/* Row 1 */}
+            <div className="flex flex-col md:flex-row border-b border-gray-200">
+              <div className="md:w-1/4 p-8 border-b md:border-b-0 md:border-r border-gray-200">
+                <span className="font-plex-mono text-[0.6rem] text-gray-400 uppercase">/ 01</span>
+              </div>
+              <div className="md:w-1/4 p-8 border-b md:border-b-0 md:border-r border-gray-200">
+                <div className="text-5xl font-chivo font-black">2003</div>
+              </div>
+              <div className="md:w-1/2 p-8">
+                <h4 className="font-bold text-lg mb-2">Founded</h4>
+                <p className="text-sm text-gray-500">Gabatia Engineers & Consultants opens its first office in Vadodara, focused on storage tank design.</p>
+              </div>
+            </div>
+            
+            {/* Row 2 */}
+            <div className="flex flex-col md:flex-row border-b border-gray-200">
+              <div className="md:w-1/4 p-8 border-b md:border-b-0 md:border-r border-gray-200">
+                <span className="font-plex-mono text-[0.6rem] text-gray-400 uppercase">/ 02</span>
+              </div>
+              <div className="md:w-1/4 p-8 border-b md:border-b-0 md:border-r border-gray-200">
+                <div className="text-5xl font-chivo font-black">2008</div>
+              </div>
+              <div className="md:w-1/2 p-8">
+                <h4 className="font-bold text-lg mb-2">First refinery contract</h4>
+                <p className="text-sm text-gray-500">Awarded detailed engineering for an Indian refinery hydrocracker piping package.</p>
+              </div>
+            </div>
+
+            {/* Row 3 */}
+            <div className="flex flex-col md:flex-row border-b border-gray-200">
+              <div className="md:w-1/4 p-8 border-b md:border-b-0 md:border-r border-gray-200">
+                <span className="font-plex-mono text-[0.6rem] text-gray-400 uppercase">/ 03</span>
+              </div>
+              <div className="md:w-1/4 p-8 border-b md:border-b-0 md:border-r border-gray-200">
+                <div className="text-5xl font-chivo font-black">2013</div>
+              </div>
+              <div className="md:w-1/2 p-8">
+                <h4 className="font-bold text-lg mb-2">International expansion</h4>
+                <p className="text-sm text-gray-500">First overseas assignment in the Gulf — structural design for an SRU pipe rack.</p>
+              </div>
+            </div>
+
+            {/* Row 4 */}
+            <div className="flex flex-col md:flex-row border-b border-gray-200">
+              <div className="md:w-1/4 p-8 border-b md:border-b-0 md:border-r border-gray-200">
+                <span className="font-plex-mono text-[0.6rem] text-gray-400 uppercase">/ 04</span>
+              </div>
+              <div className="md:w-1/4 p-8 border-b md:border-b-0 md:border-r border-gray-200">
+                <div className="text-5xl font-chivo font-black">2018</div>
+              </div>
+              <div className="md:w-1/2 p-8">
+                <h4 className="font-bold text-lg mb-2">Multi-discipline team</h4>
+                <p className="text-sm text-gray-500">Civil & structural studios formalized; integrated four-discipline delivery.</p>
+              </div>
+            </div>
+
+            {/* Row 5 */}
+            <div className="flex flex-col md:flex-row">
+              <div className="md:w-1/4 p-8 border-b md:border-b-0 md:border-r border-gray-200">
+                <span className="font-plex-mono text-[0.6rem] text-gray-400 uppercase">/ 05</span>
+              </div>
+              <div className="md:w-1/4 p-8 border-b md:border-b-0 md:border-r border-gray-200">
+                <div className="text-5xl font-chivo font-black">2023</div>
+              </div>
+              <div className="md:w-1/2 p-8">
+                <h4 className="font-bold text-lg mb-2">180+ projects delivered</h4>
+                <p className="text-sm text-gray-500">Crossed the milestone of 180 delivered projects across India, Gulf and SE Asia.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
-    </div>
+
+      {/* STATS STRIP */}
+      <section className="bg-white border-b border-gray-100 py-16 px-6 md:px-12">
+        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-12 text-center md:text-left divide-x divide-gray-100">
+          <div className="px-4">
+            <div className="text-6xl md:text-7xl font-chivo font-black mb-2 tracking-tighter text-brand-black">22+</div>
+            <div className="font-plex-mono text-[0.6rem] text-gray-500 uppercase tracking-widest">YEARS IN INDUSTRY</div>
+          </div>
+          <div className="px-4">
+            <div className="text-6xl md:text-7xl font-chivo font-black mb-2 tracking-tighter text-brand-black">180+</div>
+            <div className="font-plex-mono text-[0.6rem] text-gray-500 uppercase tracking-widest">PROJECTS DELIVERED</div>
+          </div>
+          <div className="px-4">
+            <div className="text-6xl md:text-7xl font-chivo font-black mb-2 tracking-tighter text-brand-black">60+</div>
+            <div className="font-plex-mono text-[0.6rem] text-gray-500 uppercase tracking-widest">CLIENTS SERVED</div>
+          </div>
+          <div className="px-4">
+            <div className="text-6xl md:text-7xl font-chivo font-black mb-2 tracking-tighter text-brand-black">12</div>
+            <div className="font-plex-mono text-[0.6rem] text-gray-500 uppercase tracking-widest">COUNTRIES REACHED</div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA SECTION */}
+      <section className="bg-zinc-900 py-32 px-6 md:px-12 border-t border-gray-800 text-white relative">
+        <div className="max-w-7xl mx-auto relative z-10">
+          <span className="font-plex-mono text-[0.6rem] text-gray-400 uppercase tracking-widest block mb-6">
+            [ WORK WITH US ]
+          </span>
+          <h2 className="text-5xl md:text-7xl font-chivo font-black leading-[0.95] tracking-tight mb-12">
+            Ready to specify<br/>your next project?
+          </h2>
+          
+          <Link href="/contact" className="bg-brand-yellow text-brand-black px-8 py-4 font-bold text-lg hover:bg-yellow-400 transition-colors inline-flex items-center gap-2">
+            Start the conversation <ArrowUpRight />
+          </Link>
+        </div>
+      </section>
+    </>
   );
 }

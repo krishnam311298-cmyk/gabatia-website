@@ -1,87 +1,136 @@
-import { Metadata } from 'next';
+const PhoneIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+  </svg>
+);
 
-export const metadata: Metadata = {
-  title: 'Contact Us — Gabatia Engineers',
-  description: 'Get in touch with GABATIA ENGINEER AND CONSULTANTS LLP.',
-};
+const EmailIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline>
+  </svg>
+);
+
+const ClockIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+  </svg>
+);
 
 export default function Contact() {
   return (
-    <div className="flex flex-col w-full">
-      <section className="py-20 md:py-28 bg-zinc-900 text-white relative">
-        <div className="container mx-auto px-4 md:px-8 text-center max-w-4xl relative z-10">
-          <h1 className="font-chivo text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
-            Contact <span className="text-brand-yellow">Us</span>
+    <>
+      {/* HEADER SECTION */}
+      <section className="bg-white py-32 px-6 md:px-12">
+        <div className="max-w-7xl mx-auto">
+          <span className="overline-text">[ CONTACT / 01 ]</span>
+          
+          <h1 className="text-6xl md:text-8xl font-chivo font-black leading-[0.95] tracking-tight mt-8 mb-12 max-w-5xl">
+            Let's engineer <br/>
+            something <span className="highlight-black mt-2 text-brand-yellow">together.</span>
           </h1>
-          <p className="text-zinc-400 text-lg md:text-xl">
-            Let's discuss how our engineering expertise can bring your project to life.
+          
+          <p className="text-xl text-gray-600 max-w-2xl border-t border-gray-200 pt-8">
+            Share your scope, capacity and site context. Our team responds with a feasibility note within one working day.
           </p>
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-white">
-        <div className="container mx-auto px-4 md:px-8 max-w-5xl">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24">
-            
-            {/* Contact Details */}
-            <div>
-              <h2 className="font-chivo text-3xl font-bold mb-8">Get in Touch</h2>
-              <div className="space-y-8">
-                <div>
-                  <h3 className="text-sm font-medium text-zinc-500 uppercase tracking-wider mb-2">Company</h3>
-                  <p className="text-lg font-medium text-zinc-900">GABATIA ENGINEER AND CONSULTANTS LLP</p>
-                </div>
-                
-                <div>
-                  <h3 className="text-sm font-medium text-zinc-500 uppercase tracking-wider mb-2">Contact Person</h3>
-                  <p className="text-lg font-medium text-zinc-900">Jay Shah</p>
-                </div>
-
-                <div>
-                  <h3 className="text-sm font-medium text-zinc-500 uppercase tracking-wider mb-2">Phone</h3>
-                  <a href="tel:8080853001" className="text-lg font-medium text-brand-yellow-hover hover:underline">
-                    8080853001
-                  </a>
-                </div>
-
-                <div>
-                  <h3 className="text-sm font-medium text-zinc-500 uppercase tracking-wider mb-2">Email</h3>
-                  <a href="mailto:gabatia@gmail.com" className="text-lg font-medium text-brand-yellow-hover hover:underline">
-                    gabatia@gmail.com
-                  </a>
-                </div>
+      {/* CONTACT INFO AND FORM */}
+      <section className="bg-gray-50 py-24 px-6 md:px-12 border-t border-gray-200">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-16">
+          
+          {/* LEFT SIDE - INFO */}
+          <div className="md:w-1/3">
+            <div className="mb-12">
+              <span className="overline-text">[ OFFICE ]</span>
+              <div className="text-lg text-gray-600">
+                Gabatia Engineers & Consultants<br/>
+                Industrial Estate, Gorwa<br/>
+                Vadodara, Gujarat 390010<br/>
+                India
               </div>
             </div>
-
-            {/* Contact Form */}
-            <div className="bg-zinc-50 p-8 md:p-10 rounded-2xl border border-zinc-200 shadow-sm">
-              <h2 className="font-chivo text-2xl font-bold mb-6">Send us a message</h2>
-              <form className="space-y-4">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-zinc-700 mb-1">Name</label>
-                  <input type="text" id="name" className="w-full rounded-md border border-zinc-300 px-4 py-2 text-zinc-900 focus:border-brand-yellow focus:ring-brand-yellow outline-none transition-colors" placeholder="Your name" />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-zinc-700 mb-1">Email</label>
-                  <input type="email" id="email" className="w-full rounded-md border border-zinc-300 px-4 py-2 text-zinc-900 focus:border-brand-yellow focus:ring-brand-yellow outline-none transition-colors" placeholder="Your email address" />
-                </div>
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-zinc-700 mb-1">Phone</label>
-                  <input type="tel" id="phone" className="w-full rounded-md border border-zinc-300 px-4 py-2 text-zinc-900 focus:border-brand-yellow focus:ring-brand-yellow outline-none transition-colors" placeholder="Your phone number" />
-                </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-zinc-700 mb-1">Message</label>
-                  <textarea id="message" rows={4} className="w-full rounded-md border border-zinc-300 px-4 py-2 text-zinc-900 focus:border-brand-yellow focus:ring-brand-yellow outline-none transition-colors resize-none" placeholder="How can we help you?"></textarea>
-                </div>
-                <button type="button" className="w-full bg-zinc-900 text-white font-medium rounded-md h-12 hover:bg-zinc-800 transition-colors mt-4">
-                  Send Message
-                </button>
-              </form>
+            
+            <div className="mb-12 border-t border-gray-200 pt-8">
+              <span className="overline-text">[ DIRECT ]</span>
+              <ul className="space-y-4 text-gray-600">
+                <li className="flex items-center gap-3">
+                  <span className="text-brand-yellow"><PhoneIcon /></span>
+                  <span>+91 98765 43210</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="text-brand-yellow"><EmailIcon /></span>
+                  <span>info@gabatia-engineers.com</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="text-brand-yellow"><ClockIcon /></span>
+                  <span>Mon–Sat / 09:30 – 18:30 IST</span>
+                </li>
+              </ul>
             </div>
-
+            
+            <div className="border-t border-gray-200 pt-8">
+              <span className="overline-text">[ DISCIPLINES ]</span>
+              <div className="flex flex-wrap gap-2 text-[0.6rem] font-plex-mono text-gray-500 uppercase tracking-widest">
+                <span className="border border-gray-200 bg-white px-3 py-1">/ MECHANICAL</span>
+                <span className="border border-gray-200 bg-white px-3 py-1">/ CIVIL</span>
+                <span className="border border-gray-200 bg-white px-3 py-1">/ PIPING</span>
+                <span className="border border-gray-200 bg-white px-3 py-1">/ STRUCTURAL</span>
+              </div>
+            </div>
+          </div>
+          
+          {/* RIGHT SIDE - FORM */}
+          <div className="md:w-2/3 bg-white border border-gray-200 p-8 md:p-12">
+            <span className="overline-text mb-8">[ SEND A MESSAGE ]</span>
+            
+            <form className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label className="font-plex-mono text-[0.6rem] text-gray-500 uppercase tracking-widest block mb-2">NAME *</label>
+                  <input type="text" className="w-full border border-gray-200 p-3 focus:outline-none focus:border-brand-black transition-colors" />
+                </div>
+                <div>
+                  <label className="font-plex-mono text-[0.6rem] text-gray-500 uppercase tracking-widest block mb-2">EMAIL *</label>
+                  <input type="email" className="w-full border border-gray-200 p-3 focus:outline-none focus:border-brand-black transition-colors" />
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label className="font-plex-mono text-[0.6rem] text-gray-500 uppercase tracking-widest block mb-2">PHONE</label>
+                  <input type="tel" className="w-full border border-gray-200 p-3 focus:outline-none focus:border-brand-black transition-colors" />
+                </div>
+                <div>
+                  <label className="font-plex-mono text-[0.6rem] text-gray-500 uppercase tracking-widest block mb-2">SUBJECT *</label>
+                  <input type="text" className="w-full border border-gray-200 p-3 focus:outline-none focus:border-brand-black transition-colors" />
+                </div>
+              </div>
+              
+              <div>
+                <label className="font-plex-mono text-[0.6rem] text-gray-500 uppercase tracking-widest block mb-2">MESSAGE *</label>
+                <textarea rows={6} className="w-full border border-gray-200 p-3 focus:outline-none focus:border-brand-black transition-colors resize-none" placeholder="Tell us about your scope, capacity, location and timeline..."></textarea>
+              </div>
+              
+              <div>
+                <button type="button" className="bg-brand-yellow text-brand-black px-8 py-4 font-bold text-sm hover:bg-yellow-400 transition-colors inline-flex items-center gap-2">
+                  <span className="mr-2 text-brand-black"><EmailIcon /></span> Send Inquiry
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </section>
-    </div>
+      
+      {/* MAP PLACEHOLDER */}
+      <section className="bg-white py-16 px-6 md:px-12 border-t border-gray-200">
+        <div className="max-w-7xl mx-auto">
+          <span className="overline-text mb-8">[ WHERE TO FIND US ]</span>
+        </div>
+        <div className="w-full h-96 bg-gray-200">
+          {/* Map placeholder */}
+        </div>
+      </section>
+    </>
   );
 }
