@@ -259,16 +259,19 @@ export default function Home() {
           </div>
           
           {/* TRUSTED BY INDUSTRY LEADERS */}
-          <div className="mt-32 border-t border-gray-100 pt-16 mb-32 overflow-hidden w-full relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] px-0">
+          <div className="mt-32 border-t border-gray-100 pt-16 mb-32 overflow-hidden w-[100vw] relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] px-0 bg-gray-50/50 py-12">
             <div className="max-w-7xl mx-auto px-6 md:px-12 mb-12">
               <span className="overline-text block">[ TRUSTED BY INDUSTRY LEADERS ]</span>
             </div>
             
-            {/* Edge-to-edge sliding carousel */}
-            <div className="flex w-max animate-marquee gap-8 opacity-60 pl-6 md:pl-12">
-              {[1, 2, 3, 4, 5, 6, 7, 1, 2, 3, 4, 5, 6, 7].map((num, i) => (
-                <div key={i} className="h-20 w-32 bg-gray-50 flex items-center justify-center grayscale hover:grayscale-0 transition-all border border-gray-200 p-2">
-                  <img src={`/images/image${num}.jpeg`} alt={`Client ${num}`} className="w-full h-full object-contain" />
+            {/* Edge-to-edge sliding text marquee */}
+            <div className="flex w-max animate-marquee gap-8 opacity-100 pl-6 md:pl-12">
+              {[
+                "HPCL", "BPCL", "IOCL", "MEIL", "KOC", "GAIL", "EIL", "Technip", "Toyo", "MRPL", "PDIL", "B & R", "Mongol Refinery", "Worley", "SAIL", "DRDO",
+                "HPCL", "BPCL", "IOCL", "MEIL", "KOC", "GAIL", "EIL", "Technip", "Toyo", "MRPL", "PDIL", "B & R", "Mongol Refinery", "Worley", "SAIL", "DRDO"
+              ].map((client, i) => (
+                <div key={i} className="h-24 px-10 bg-white flex items-center justify-center border border-gray-200 shadow-sm hover:border-gray-300 transition-all cursor-default">
+                  <span className="font-chivo font-black text-2xl md:text-3xl text-gray-400 hover:text-brand-yellow transition-colors whitespace-nowrap">{client}</span>
                 </div>
               ))}
             </div>
