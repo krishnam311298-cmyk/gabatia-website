@@ -24,8 +24,8 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-100 h-20 flex items-center px-6 md:px-12 justify-between">
       <Link href="/" className="flex items-center gap-3">
-        <div className="w-10 h-10 bg-brand-black flex items-center justify-center text-brand-yellow font-chivo font-bold text-xl">
-          G
+        <div className="w-10 h-10 flex items-center justify-center">
+          <img src="/images/gec-logo.png" alt="Gabatia Engineers & Consultants" className="w-full h-full object-contain" />
         </div>
         <div className="flex flex-col">
           <span className="font-chivo font-black text-lg leading-none tracking-tight text-brand-black">GABATIA</span>

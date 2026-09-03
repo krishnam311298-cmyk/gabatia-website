@@ -9,18 +9,22 @@ const ArrowUpRight = () => (
 
 export default function Clients() {
   const clients = [
-    "Indian Oil Corporation",
-    "Bharat Petroleum",
-    "Hindustan Petroleum",
-    "Reliance Industries",
-    "ONGC",
-    "GAIL India",
-    "Adani Petronet",
-    "Nayara Energy",
-    "Petroleum Development Oman",
-    "BAPCO Bahrain",
-    "ADNOC",
-    "Saudi Aramco"
+    "HPCL",
+    "BPCL",
+    "IOCL",
+    "Megha Engineering Infra Pvt Ltd (MEIL)",
+    "Kuwait Oil Company (KOC)",
+    "GAIL",
+    "EIL",
+    "Technip",
+    "Toyo",
+    "MRPL",
+    "PDIL",
+    "B & R",
+    "Mongol Refinery",
+    "Worley",
+    "SAIL",
+    "DRDO"
   ];
 
   return (

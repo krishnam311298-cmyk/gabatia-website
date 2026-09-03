@@ -142,8 +142,8 @@ export default function RootLayout({
               </div>
             </div>
             
-            <div className="mt-24 pt-8 border-t border-gray-900 flex flex-col md:flex-row justify-between text-xs text-gray-600 font-plex-mono uppercase tracking-widest">
-              <p>© 2026 GABATIA ENGINEERS & CONSULTANTS — ALL RIGHTS RESERVED</p>
+            <div className="mt-24 pt-8 border-t border-gray-900 flex flex-col md:flex-row justify-between text-xs text-gray-600 font-plex-mono uppercase tracking-widest gap-4 md:gap-0">
+              <p>© 2026 GABATIA ENGINEERS & CONSULTANTS — ALL RIGHTS RESERVED <span className="mx-2">|</span> <Link href="/privacy-policy" className="hover:text-gray-400 transition-colors">PRIVACY POLICY</Link></p>
               <p>EST. 2003 / VADODARA, IN</p>
             </div>
           </div>
