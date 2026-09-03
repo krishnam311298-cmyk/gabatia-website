@@ -182,7 +182,7 @@ export default function Home() {
             {/* Project 1 */}
             <div className="group cursor-pointer">
               <div className="bg-gray-100 aspect-[4/3] mb-6 relative overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&q=80&w=800&h=600" alt="Crude Storage Terminal" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <img src="/images/image1.jpeg" alt="Crude Storage Terminal" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
               <div className="flex justify-between text-[0.6rem] font-plex-mono text-gray-400 uppercase tracking-widest mb-3">
                 <span>/ OIL TERMINAL</span>
@@ -195,7 +195,7 @@ export default function Home() {
             {/* Project 2 */}
             <div className="group cursor-pointer">
               <div className="bg-gray-100 aspect-[4/3] mb-6 relative overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1580982335151-5120a1122a61?auto=format&fit=crop&q=80&w=800&h=600" alt="Refinery Piping" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <img src="/images/image2.jpeg" alt="Refinery Piping" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
               <div className="flex justify-between text-[0.6rem] font-plex-mono text-gray-400 uppercase tracking-widest mb-3">
                 <span>/ REFINERY</span>
@@ -208,7 +208,7 @@ export default function Home() {
             {/* Project 3 */}
             <div className="group cursor-pointer">
               <div className="bg-gray-100 aspect-[4/3] mb-6 relative overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1542361345-89ce1f116035?auto=format&fit=crop&q=80&w=800&h=600" alt="Olefins Storage" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <img src="/images/image4.jpeg" alt="Olefins Storage" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
               <div className="flex justify-between text-[0.6rem] font-plex-mono text-gray-400 uppercase tracking-widest mb-3">
                 <span>/ PETROCHEMICALS</span>
@@ -217,25 +217,72 @@ export default function Home() {
               <h3 className="text-xl font-chivo font-bold mb-2">Petrochemical Olefins Storage</h3>
               <p className="text-gray-500 text-sm">Dahej, Gujarat</p>
             </div>
+            
+            {/* Project 4 */}
+            <div className="group cursor-pointer">
+              <div className="bg-gray-100 aspect-[4/3] mb-6 relative overflow-hidden">
+                <img src="/images/image5.jpeg" alt="Oil Depot Expansion" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              </div>
+              <div className="flex justify-between text-[0.6rem] font-plex-mono text-gray-400 uppercase tracking-widest mb-3">
+                <span>/ OIL DEPOTS</span>
+                <span>2020</span>
+              </div>
+              <h3 className="text-xl font-chivo font-bold mb-2">Multi-Product Oil Depot Expansion</h3>
+              <p className="text-gray-500 text-sm">Pune, Maharashtra</p>
+            </div>
+            
+            {/* Project 5 */}
+            <div className="group cursor-pointer">
+              <div className="bg-gray-100 aspect-[4/3] mb-6 relative overflow-hidden">
+                <img src="/images/image6.jpeg" alt="Mounded Bullets" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              </div>
+              <div className="flex justify-between text-[0.6rem] font-plex-mono text-gray-400 uppercase tracking-widest mb-3">
+                <span>/ LPG</span>
+                <span>2019</span>
+              </div>
+              <h3 className="text-xl font-chivo font-bold mb-2">LPG Mounded Storage Bullets</h3>
+              <p className="text-gray-500 text-sm">Visakhapatnam, AP</p>
+            </div>
+            
+            {/* Project 6 */}
+            <div className="group cursor-pointer">
+              <div className="bg-gray-100 aspect-[4/3] mb-6 relative overflow-hidden">
+                <img src="/images/image7.jpeg" alt="Sulphur Recovery Unit" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              </div>
+              <div className="flex justify-between text-[0.6rem] font-plex-mono text-gray-400 uppercase tracking-widest mb-3">
+                <span>/ REFINERY</span>
+                <span>2018</span>
+              </div>
+              <h3 className="text-xl font-chivo font-bold mb-2">Refinery Sulphur Recovery Unit</h3>
+              <p className="text-gray-500 text-sm">Bina, MP</p>
+            </div>
           </div>
           
           {/* TRUSTED BY INDUSTRY LEADERS */}
-          <div className="mt-32 border-t border-gray-100 pt-16">
-            <span className="overline-text mb-12 block text-center">[ TRUSTED BY INDUSTRY LEADERS ]</span>
-            <div className="flex flex-wrap justify-between items-center opacity-40 grayscale gap-8 px-8">
-              <div className="font-bold text-gray-500 text-xl">Indian Oil</div>
-              <div className="font-bold text-gray-500 text-xl">BPCL</div>
-              <div className="font-bold text-gray-500 text-xl">HPCL</div>
-              <div className="font-bold text-gray-500 text-xl">Reliance</div>
-              <div className="font-bold text-gray-500 text-xl">ADNOC</div>
-              <div className="font-bold text-gray-500 text-xl">Aramco</div>
+          <div className="mt-32 border-t border-gray-100 pt-16 mb-32 overflow-hidden w-full relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] px-0">
+            <div className="max-w-7xl mx-auto px-6 md:px-12 mb-12">
+              <span className="overline-text block">[ TRUSTED BY INDUSTRY LEADERS ]</span>
+            </div>
+            
+            {/* Edge-to-edge sliding carousel */}
+            <div className="flex w-max animate-marquee gap-8 opacity-60 pl-6 md:pl-12">
+              {[1, 2, 3, 4, 5, 6, 7, 1, 2, 3, 4, 5, 6, 7].map((num, i) => (
+                <div key={i} className="h-20 w-32 bg-gray-50 flex items-center justify-center grayscale hover:grayscale-0 transition-all border border-gray-200 p-2">
+                  <img src={`/images/image${num}.jpeg`} alt={`Client ${num}`} className="w-full h-full object-contain" />
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA SECTION */}
-      <section className="bg-zinc-900 py-32 px-6 md:px-12 border-t border-gray-800 text-white relative">
+      <section className="bg-zinc-900 py-32 px-6 md:px-12 border-t border-gray-800 text-white relative overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 opacity-100 mix-blend-overlay">
+          <img src="/images/image3.jpeg" alt="Blueprint" className="w-full h-full object-cover grayscale" />
+        </div>
+        
         <div className="max-w-7xl mx-auto relative z-10 flex flex-col md:flex-row items-center justify-between gap-12">
           <div className="md:w-2/3">
             <h2 className="text-5xl md:text-7xl font-chivo font-black leading-[0.95] tracking-tight mb-6">

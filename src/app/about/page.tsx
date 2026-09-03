@@ -68,7 +68,7 @@ export default function About() {
         <div className="flex flex-col lg:flex-row">
           {/* Image Side */}
           <div className="lg:w-1/2 min-h-[400px] lg:min-h-[600px] relative">
-             <img src="https://placehold.co/800x800/222/555?text=Engineering+Values" alt="Values" className="w-full h-full object-cover" />
+             <img src="/images/image4.jpeg" alt="Values" className="w-full h-full object-cover" />
           </div>
           
           {/* Content Side */}
@@ -206,7 +206,12 @@ export default function About() {
       </section>
 
       {/* CTA SECTION */}
-      <section className="bg-zinc-900 py-32 px-6 md:px-12 border-t border-gray-800 text-white relative">
+      <section className="bg-zinc-900 py-32 px-6 md:px-12 border-t border-gray-800 text-white relative overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 opacity-100 mix-blend-overlay">
+          <img src="/images/image3.jpeg" alt="Blueprint" className="w-full h-full object-cover grayscale" />
+        </div>
+        
         <div className="max-w-7xl mx-auto relative z-10">
           <span className="font-plex-mono text-[0.6rem] text-gray-400 uppercase tracking-widest block mb-6">
             [ WORK WITH US ]

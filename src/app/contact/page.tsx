@@ -122,13 +122,21 @@ export default function Contact() {
         </div>
       </section>
       
-      {/* MAP PLACEHOLDER */}
-      <section className="bg-white py-16 px-6 md:px-12 border-t border-gray-200">
-        <div className="max-w-7xl mx-auto">
-          <span className="overline-text mb-8">[ WHERE TO FIND US ]</span>
+      {/* MAP SECTION */}
+      <section className="bg-white pt-16 border-t border-gray-200">
+        <div className="max-w-7xl mx-auto text-center mb-12">
+          <span className="overline-text">[ WHERE TO FIND US ]</span>
         </div>
-        <div className="w-full h-96 bg-gray-200">
-          {/* Map placeholder */}
+        <div className="w-full h-[500px] grayscale contrast-125">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d118106.7001022166!2d73.10304620000001!3d22.32210265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc8ab91a3ddab%3A0xac39d3bfe1473fb8!2sVadodara%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1715694294025!5m2!1sen!2sin" 
+            width="100%" 
+            height="100%" 
+            style={{ border: 0 }} 
+            allowFullScreen={false} 
+            loading="lazy" 
+            referrerPolicy="no-referrer-when-downgrade"
+          />
         </div>
       </section>
     </>

@@ -33,7 +33,7 @@ export default function Projects() {
       description: "Greenfield design of six floating-roof tanks with associated dyke, pump house and pipeline tie-in.",
       location: "MUNDRA, GUJARAT",
       year: "2023",
-      image: "https://placehold.co/800x600/333/ccc?text=Project+1"
+      image: "/images/image1.jpeg"
     },
     {
       id: 2,
@@ -42,7 +42,7 @@ export default function Projects() {
       description: "Detail engineering of 14 km process piping with stress analysis and pipe support design.",
       location: "JAMNAGAR, GUJARAT",
       year: "2022",
-      image: "https://placehold.co/800x600/333/ccc?text=Project+2"
+      image: "/images/image2.jpeg"
     },
     {
       id: 3,
@@ -51,7 +51,7 @@ export default function Projects() {
       description: "Cryogenic ethylene storage tanks (40,000 m³) with full structural and civil package.",
       location: "DAHEJ, GUJARAT",
       year: "2021",
-      image: "https://placehold.co/800x600/333/ccc?text=Project+3"
+      image: "/images/image4.jpeg"
     },
     {
       id: 4,
@@ -60,7 +60,7 @@ export default function Projects() {
       description: "Brownfield depot expansion: 8 cone-roof tanks, TLF, FW system & pipe rack rerouting.",
       location: "HAZIRA, GUJARAT",
       year: "2020",
-      image: "https://placehold.co/800x600/333/ccc?text=Project+4"
+      image: "/images/image5.jpeg"
     },
     {
       id: 5,
@@ -69,7 +69,7 @@ export default function Projects() {
       description: "Mechanical & civil design for 6 × 1500 m³ mounded LPG bullets including FW deluge.",
       location: "VISAKHAPATNAM, AP",
       year: "2019",
-      image: "https://placehold.co/800x600/333/ccc?text=Project+5"
+      image: "/images/image6.jpeg"
     },
     {
       id: 6,
@@ -78,7 +78,7 @@ export default function Projects() {
       description: "International assignment: structural design of SRU pipe rack and equipment supports.",
       location: "BAHRAIN",
       year: "2018",
-      image: "https://placehold.co/800x600/333/ccc?text=Project+6"
+      image: "/images/image7.jpeg"
     }
   ];
 

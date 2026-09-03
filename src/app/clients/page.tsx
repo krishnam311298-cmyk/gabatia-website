@@ -58,17 +58,20 @@ export default function Clients() {
       </section>
 
       {/* IN THE FIELD */}
-      <section className="bg-white py-16 px-6 md:px-12 border-t border-gray-200 overflow-hidden">
-        <div className="max-w-7xl mx-auto mb-8">
-          <span className="overline-text">[ IN THE FIELD ]</span>
-        </div>
-        <div className="flex gap-8 items-center justify-center opacity-60 grayscale hover:grayscale-0 transition-all">
-          <div className="w-32 h-16 bg-gray-200 flex items-center justify-center font-bold text-gray-400">LOGO</div>
-          <div className="w-32 h-16 bg-gray-200 flex items-center justify-center font-bold text-gray-400">LOGO</div>
-          <div className="w-32 h-16 bg-gray-200 flex items-center justify-center font-bold text-gray-400">LOGO</div>
-          <div className="w-32 h-16 bg-gray-200 flex items-center justify-center font-bold text-gray-400">LOGO</div>
-          <div className="w-32 h-16 bg-gray-200 flex items-center justify-center font-bold text-gray-400">LOGO</div>
-          <div className="w-32 h-16 bg-gray-200 flex items-center justify-center font-bold text-gray-400">LOGO</div>
+      <section className="bg-white py-24 border-t border-gray-200">
+        <div className="overflow-hidden w-full relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] px-0">
+          <div className="max-w-7xl mx-auto px-6 md:px-12 mb-12">
+            <span className="overline-text block">[ IN THE FIELD ]</span>
+          </div>
+          
+          {/* Edge-to-edge sliding carousel */}
+          <div className="flex w-max animate-marquee gap-8 opacity-60 pl-6 md:pl-12">
+            {[1, 2, 3, 4, 5, 6, 7, 1, 2, 3, 4, 5, 6, 7].map((num, i) => (
+              <div key={i} className="h-20 w-32 bg-gray-50 flex items-center justify-center grayscale hover:grayscale-0 transition-all border border-gray-200 p-2">
+                <img src={`/images/image${num}.jpeg`} alt={`Client ${num}`} className="w-full h-full object-contain" />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

@@ -159,8 +159,13 @@ export default function Services() {
         </div>
       </section>
 
-      {/* HOW WE DELIVER SECTION (Blueprint) */}
-      <section className="bg-blueprint py-32 px-6 md:px-12 border-t border-gray-800 text-white relative">
+      {/* HOW WE DELIVER SECTION */}
+      <section className="bg-zinc-900 py-32 px-6 md:px-12 border-t border-gray-800 text-white relative overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 opacity-100 mix-blend-overlay">
+          <img src="/images/image3.jpeg" alt="Blueprint" className="w-full h-full object-cover grayscale" />
+        </div>
+        
         <div className="max-w-7xl mx-auto relative z-10">
           <span className="font-plex-mono text-[0.6rem] text-gray-400 uppercase tracking-widest block mb-6">
             [ PROCESS / 02 ]
